@@ -95,19 +95,19 @@ chmod +x /usr/bin/systemdc && systemdc
         read -p "输入选项 (1 或 2或其他): " script_choice
         case $script_choice in
             1)
-                echo "运行脚本1"
+                echo "运行shellclash"
                 export url='https://fastly.jsdelivr.net/gh/juewuy/ShellCrash@master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
                 ;;
             2)
-                echo "运行脚本2"
+                echo "运行v2ray-agent"
                 wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
                 ;;
             3)
-                echo "运行脚本3"
+                echo "运行X-ui"
                 bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
                 ;;
             4)
-                echo "运行脚本4"
+                echo "运行hysteria 2"
                 wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
                 ;;                
             *)
