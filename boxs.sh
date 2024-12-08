@@ -108,10 +108,6 @@ chmod +x /usr/bin/systemdc && systemdc
                 ;;
             4)
                 echo "运行脚本4"
-                vi /etc/ssh/sshd_config
-                ;;
-            4)
-                echo "运行脚本4"
                 wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
                 ;;                
             *)
