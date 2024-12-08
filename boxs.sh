@@ -25,59 +25,59 @@ case $group_choice in
         read -p "输入选项 (1 或 2或其他): " script_choice
         case $script_choice in
             1)
-                echo "运行脚本1"
+                echo "运行安装依赖"
                 apt update && apt upgrade -y && apt-get install curl -y && apt-get install wget -y  && wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
                 ;;
             2)
-                echo "运行脚本2"
+                echo "运行综合工具X86"
                 wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh && chmod +x box.sh && clear && ./box.sh
                 ;;
             3)
-                echo "运行脚本3"
+                echo "运行综合工具arm"
                 wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/armbox.sh && chmod +x box.sh && clear && ./box.sh
                 ;;
             4)
-                echo "运行脚本4"
+                echo "运行编辑SSH"
                 vi /etc/ssh/sshd_config
                 ;;
             5)
-                echo "运行脚本5"
+                echo "运行重启SSH"
                 service sshd restart
                 ;;
              6)
-                echo "运行脚本6"
+                echo "运行关闭防火墙"
                 ufw disable
                 ;;
             7)
-                echo "运行脚本7"
+                echo "运行同步服务器北京时间"
                 timedatectl set-timezone Asia/Shanghai
                 ;;
             8)
-                echo "运行脚本8"
+                echo "运行重启cron服务"
                 /etc/init.d/cron restart
                 ;;
             9)
-                echo "运行脚本9"
+                echo "运行密钥文件权限"
                 chmod 600 ~/.ssh/authorized_keys && chmod 700 ~/.ssh && clear && ./box.sh
                 ;;
             10)
-                echo "运行脚本10"
+                echo "运行screen安装"
                 apt-get install screen -y
                 ;;
             11)
-                echo "运行脚本11"
+                echo "运行screen某个窗口1"
                 screen -S 1
                 ;;
             12)
-                echo "运行脚本12"
+                echo "运行恢复screen窗口1"
                 screen -r 1
                 ;;
             13)
-                echo "运行脚本13"
+                echo "运行增加swap"
                 wget https://raw.githubusercontent.com/sduwfc/note/master/swap.sh && bash swap.sh
                 ;;
             14)
-                echo "运行脚本14"
+                echo "运行Systemd 服务创建工具"
                 wget https://raw.githubusercontent.com/ours1505/systemdc/refs/heads/main/main.py -O /usr/bin/systemdc
 chmod +x /usr/bin/systemdc && systemdc
                 ;;               
