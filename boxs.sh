@@ -144,9 +144,6 @@ chmod +x /usr/bin/systemdc && systemdc
             3)
                 echo "运行 fscarmen / warp"
                 wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
-            4)
-                echo "运行 CFwarp"
-                wget -N --no-check-certificate https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh && bash CFwarp.sh  
             5)
                 echo "运行 warp-go"
                 wget -N https://raw.githubusercontent.com/fscarmen/warp/main/warp-go.sh && bash warp-go.sh
