@@ -143,7 +143,7 @@ chmod +x /usr/bin/systemdc && systemdc
                 ;;
             3)
                 echo "运行 fscarmen / warp"
-                wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+                wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh && bash menu.sh
                 ;;
             4)
                 echo "运行 CFwarp"
