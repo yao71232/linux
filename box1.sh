@@ -3,11 +3,7 @@
 echo "请选择要运行的脚本分组："
 echo "1. 默认"
 echo "2. 科学"
-echo "3. Cloudflare WARP"
-echo "4. 中转"
-echo "5. 面版"
-echo "6. 测试"
-read -p "输入选项 (1 或 2或其他): " group_choice
+read -p "输入选项 (1 或 2): " group_choice
 
 case $group_choice in
     1)
@@ -118,30 +114,6 @@ chmod +x /usr/bin/systemdc && systemdc
             4)
                 echo "运行 hysteria 2"
                 wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
-                ;;               
-            *)
-                echo "无效选项"
-                ;;
-        esac
-        ;;
-    3)
-        echo "请选择要运行的脚本："
-        echo "1. WARP集合X86"
-        echo "2. WARP集合arm"
-        echo "3. warp-go"
-        read -p "输入选项 (1 或 2或其他): " script_choice
-        case $script_choice in
-            1)
-                echo "运行 WARP集合X86"
-                wget -N --no-check-certificate https://raw.githubusercontent.com/YG-tsj/Oracle-warp/main/multiX86.sh && chmod +x multiX86.sh && ./multiX86.sh
-                ;;
-            2)
-                echo "运行 WARP集合arm"
-                wget -N --no-check-certificate https://raw.githubusercontent.com/YG-tsj/Oracle-warp/main/multiARM.sh && chmod +x multiARM.sh && ./multiARM.sh
-                ;;
-            3)
-                echo "运行 CFwarp"
-                wget -N --no-check-certificate https://gitlab.com/rwkgyg/CFwarp/raw/main/CFwarp.sh && bash CFwarp.sh                  
                 ;;               
             *)
                 echo "无效选项"
