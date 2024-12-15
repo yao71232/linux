@@ -101,6 +101,7 @@ chmod +x /usr/bin/systemdc && systemdc
         echo "2. v2ray-agent"
         echo "3. X-ui"
         echo "4. hysteria 2"
+        echo "5. S-ui"
         read -p "输入选项 (1 或 2或其他): " script_choice
         case $script_choice in
             1)
@@ -118,7 +119,11 @@ chmod +x /usr/bin/systemdc && systemdc
             4)
                 echo "运行 hysteria 2"
                 wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
-                ;;               
+                ;; 
+            5)
+                echo "运行 S-ui"
+                bash <(curl -Ls https://raw.githubusercontent.com/alireza0/s-ui/master/install.sh)
+                ;;                
             *)
                 echo "无效选项"
                 ;;
